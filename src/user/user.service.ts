@@ -20,4 +20,8 @@ export class UserService {
       throw error;
     }
   }
+
+  async getUserById(userId: string) {
+    return this.userModel.findOne({ _id: userId });
+  }
 }
